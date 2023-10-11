@@ -13,3 +13,5 @@ For this assignment, you are tasked with:
 - Ensure the `IProduct` interface is correctly implemented in the `Product` abstract class.
 - The `Product` abstract class should have a readonly field `string name` and a constructor with an init specifier.
 - Implement a `toString` method in all relevant classes to provide a string representation of the object.
+
+![Diagram](Diagrams/Png_files/ProductStructureDiagram.png)

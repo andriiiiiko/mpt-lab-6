@@ -1,0 +1,24 @@
+@startuml
+
+interface IProduct {
+    +  GetPrice(): double
+    +  GetDescription(): string
+} 
+
+abstract class Product {
+  - readonly _name: string
+  + Product(init name: string)
+  + GetPrice(): double
+  + GetDescription(): string
+}
+
+class OrganicProduct {
+  + OrganicProduct(init name: string)
+  + GetPrice(): double
+  + GetDescription(): string
+}
+
+Product <|-- OrganicProduct
+IProduct <|-- Product
+
+@enduml
