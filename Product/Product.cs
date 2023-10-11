@@ -1,12 +1,12 @@
 namespace mpt_lab_6.Product;
 
-public class Product : IProduct
+public abstract class Product : IProduct
 {
     public readonly string Name;
-    private int _price;
+    private double _price;
     private string _description;
 
-    public Product(string name, int price, string description)
+    public Product(string name, double price, string description)
     {
         Name = name;
         _price = price;
@@ -18,7 +18,7 @@ public class Product : IProduct
         return _price;
     }
 
-    public void SetPrice(int price)
+    public void SetPrice(double price)
     {
         if (price > 0)
         {
@@ -45,5 +45,10 @@ public class Product : IProduct
         {
             throw new ArgumentException("The description should be longer");
         }
+    }
+
+    public override string ToString()
+    {
+        return $"Product Name: {Name}, Price: {_price:C}, Description: {_description}";
     }
 }
